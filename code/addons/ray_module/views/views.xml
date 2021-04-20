@@ -1,0 +1,72 @@
+<odoo>
+  <data>
+
+    <record id="action_ray_module_wallets" model="ir.actions.act_window">
+      <field name="name">Wallets</field>
+      <field name="res_model">ray_module.wallet</field>
+    </record>
+
+  <menuitem sequence="0" id="menu_wallets" name="Wallets"/>
+  <menuitem id="menu_wallets_content" parent="menu_wallets"
+            name="Wallets Balance"/>
+  <menuitem id="menu_wallets_content_wallets"
+            parent="menu_wallets_content"
+            action="action_ray_module_wallets"/>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="ray_module.list">
+      <field name="name">ray_module list</field>
+      <field name="model">ray_module.ray_module</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="ray_module.action_window">
+      <field name="name">ray_module window</field>
+      <field name="res_model">ray_module.ray_module</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ray_module.action_server">
+      <field name="name">ray_module server</field>
+      <field name="model_id" ref="model_ray_module_ray_module"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="ray_module" id="ray_module.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ray_module.menu_1" parent="ray_module.menu_root"/>
+    <menuitem name="Menu 2" id="ray_module.menu_2" parent="ray_module.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ray_module.menu_1_list" parent="ray_module.menu_1"
+              action="ray_module.action_window"/>
+    <menuitem name="Server to list" id="ray_module" parent="ray_module.menu_2"
+              action="ray_module.action_server"/>
+-->
+  </data>
+</odoo>
