@@ -10,8 +10,8 @@
             <div class="container">
               <t t-foreach="wallets" t-as="wallet">
                 <p>
-                  <t t-esc="wallet.name"/>
-                  <t t-esc="wallet.balance"/>
+                  <h2 t-field="wallet.name"/>
+                  <h4 t-field="wallet.balance"/>
                 </p>
               </t>
             </div>

@@ -14,4 +14,4 @@ Execute `docker-compose up`
 
 # How to use
 
-Install ray_module. Start adding records!!!!!!.
+Go to `localhost:8069` and install ray_module. Login like admin and start adding records. Go to `localhost:8069/wallets` to see records, you can add `localhost:8069/wallets` page to website pages menu and publish it.

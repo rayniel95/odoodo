@@ -4,7 +4,7 @@ from odoo import http
 
 class RayModule(http.Controller):
 
-    @http.route('/', auth='public', website=True)
+    @http.route('/wallets', auth='public', website=True)
     def index(self, **kw):
         wallets = http.request.env['ray_module.wallet']
         return http.request.render(
